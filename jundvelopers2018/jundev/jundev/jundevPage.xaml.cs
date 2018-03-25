@@ -25,7 +25,7 @@ namespace jundev
         public void GetImageDescription()
         {
 
-            visual.SetCredential("e73ace2dc2f0bed16c7fd0d3175237ce88f9fba9");
+            visual.SetCredential("sua-chave-ibm");
 
            
             SelectedImage.Source = txtimagem.Text;
