@@ -5,7 +5,7 @@
         <ScrollView>
          <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" 
                 Spacing="10" Padding="15" >
-            <Label Text="Baixada Nerd 2018" HorizontalOptions="Center" 
+            <Label Text="Demo JunDevs 2018" HorizontalOptions="Center" 
                 FontAttributes="Bold" />
                 <Editor HeightRequest="50" WidthRequest="300" HorizontalOptions="CenterAndExpand"  x:Name="txtimagem" BackgroundColor="Aqua" />
 
