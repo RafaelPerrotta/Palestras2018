@@ -62,10 +62,10 @@ namespace meetopCompVision
                 {
                     return stream;
                 });
+
+                //retorno da API
                 var result = await GetImageDescription(image.GetStream());
                 image.Dispose();
-
-
 
                 Description.Text = result.Description.Captions[0].Text;
 
@@ -90,10 +90,11 @@ namespace meetopCompVision
             }
             InfoLabel.Text = "Completed!";
         }
+        //Implementação do Computer Vision
         public async Task<AnalysisResult> GetImageDescription(Stream imageStream)
         {
             VisionServiceClient visionClient = new VisionServiceClient("f3c195d841fc438d8ed00e64e4639b7d", "https://southcentralus.api.cognitive.microsoft.com/vision/v1.0");
-            VisualFeature[] features = { VisualFeature.Tags, VisualFeature.Categories, VisualFeature.Description , VisualFeature.Faces };
+            VisualFeature[] features = { VisualFeature.Tags, VisualFeature.Categories, VisualFeature.Description };
             return await visionClient.AnalyzeImageAsync(imageStream, features.ToList(), null);
         }
         private void Button_Clicked(object sender, EventArgs e)
