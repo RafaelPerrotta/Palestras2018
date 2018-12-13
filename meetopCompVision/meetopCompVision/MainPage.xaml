@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:meetopCompVision"
+             x:Class="meetopCompVision.MainPage">
+    <ScrollView>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Computer Vision MeeTop!" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+            <Button Text="Tirar uma foto" VerticalOptions="Center" HorizontalOptions="Center" Clicked="CamButton_Clicked" />
+            <Button Text="Escolher da biblioteca" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Button_Clicked" />
+            <!---->
+            
+            <Image x:Name="SelectedImage" Aspect="AspectFit" WidthRequest="150" HeightRequest="150" />
+            <Label x:Name="Description" HorizontalOptions="CenterAndExpand" Text="" Margin="10" LineBreakMode="WordWrap"/>
+            <Label x:Name="InfoLabel" HorizontalOptions="CenterAndExpand" Text="" Margin="10" LineBreakMode="WordWrap"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
